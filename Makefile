@@ -2,7 +2,10 @@ CC = ./buildroot/output/staging/usr/bin/avr32-linux-gcc
 FLAGS := -pthread
 SRCS := ${wildcard *.c} ${wildcard **/*.c}
 
-all:  ${SRCS}
+all:	${SRCS}
+	${CC} ${FLAGS} $^ -o main
+
+start:  ${SRCS}
 	${CC} ${FLAGS} $^ -o main
 	cp main /export/nfs/home/avr32/
 	@./miniproject-server
