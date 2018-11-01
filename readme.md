@@ -1,5 +1,7 @@
 # Miniproject
-Extract the files to the same folder as you have your buildroot folder and run ```make```.
+Extract the files to the same folder as you have your buildroot folder and run ```make```. This compils all .c files into an executable called main. Copy this executable to the desired location on the NGW1000. 
+
+You can also run ```make start``` to compile, copy the file to _/export/nfs/home/avr32/_ and start the _miniporject-sever_.
 
 ## Threading
 We have chosen to use three threads to solve the task. This is mainly due to the recommendation we got from the problem text. It also seemed logical. Each thread has its own responsibility, one for receiving messages from the NGW100, one for controlling the dynamic system and one for handling signals. 
